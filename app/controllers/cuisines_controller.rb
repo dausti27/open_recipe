@@ -32,7 +32,7 @@ class CuisinesController < ApplicationController
     @cuisine.name = params[:name]
 
     if @cuisine.save
-      redirect_to "/cuisines", :notice => "Cuisine updated successfully."
+      redirect_to "/cuisines", :notice => "Cuisine updated successfully. Sounds delicious."
     else
       render 'edit'
     end
