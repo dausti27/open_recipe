@@ -15,7 +15,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Edit Recipe #<%= @recipe.id %></h3>
+        <h3 class="panel-title">Edit <%= @recipe.recipe_name %></h3>
       </div>
       <div class="panel-body">
         <form action="/update_recipe/<%= @recipe.id %>" method="post" class="form-horizontal">
@@ -32,23 +32,23 @@
             </div>
           </div>
 
-          <!-- Label and input for protein_id -->
+           <!-- Label and input for protein_id -->
           <div class="form-group">
             <label for="protein_id" class="col-sm-2 control-label">
               Protein
             </label>
             <div class="col-sm-10">
-              <input type="text" id="protein_id" name="protein_id" placeholder="Protein" class="form-control" value="<%= @recipe.protein_id %>">
+               <%= select_tag(:protein_id, options_from_collection_for_select(Protein.all, :id, :name, @recipe.protein_id), :class => "form-control") %>
             </div>
           </div>
 
-          <!-- Label and input for chef_id -->
+                  <!-- Label and input for chef_id -->
           <div class="form-group">
             <label for="chef_id" class="col-sm-2 control-label">
               Chef
             </label>
             <div class="col-sm-10">
-              <input type="text" id="chef_id" name="chef_id" placeholder="Chef" class="form-control" value="<%= @recipe.chef_id %>">
+              <%= select_tag(:chef_id, options_from_collection_for_select(Chef.all, :id, :name, @recipe.chef_id), :class => "form-control") %>
             </div>
           </div>
 
@@ -58,7 +58,7 @@
               Cuisine
             </label>
             <div class="col-sm-10">
-              <input type="text" id="cuisine_id" name="cuisine_id" placeholder="Cuisine" class="form-control" value="<%= @recipe.cuisine_id %>">
+              <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name, @recipe.cuisine_id), :class => "form-control") %>
             </div>
           </div>
 
