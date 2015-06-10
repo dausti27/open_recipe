@@ -4,12 +4,17 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= @cuisine.name %></h3>
+        <h3 class="panel-title"><%= @cuisine.name %> Recipes</h3>
       </div>
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
             <dl class="dl-horizontal">
+            
+            <dd><% @cuisine.recipes.each do |record| %>
+            <a href= "http://localhost:3000/recipes/<%= record.id %>" > <%= record.recipe_name %> </a> |
+            <% end %>
+
             </dl>
             
             <div class="btn-group btn-group-justified">

@@ -14,6 +14,7 @@ class ProteinsController < ApplicationController
   def create
     @protein = Protein.new
     @protein.name = params[:name]
+    @protein.image_url = params[:image_url]
 
     if @protein.save
       redirect_to "/proteins", :notice => "Protein created successfully."
@@ -30,6 +31,7 @@ class ProteinsController < ApplicationController
     @protein = Protein.find(params[:id])
 
     @protein.name = params[:name]
+    @protein.image_url = params[:image_url]
 
     if @protein.save
       redirect_to "/proteins", :notice => "Protein updated successfully."

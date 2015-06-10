@@ -25,12 +25,22 @@
           <!-- Label and input for name -->
           <div class="form-group">
             <label for="name" class="col-sm-2 control-label">
-              Name
+              Protein
             </label>
             <div class="col-sm-10">
               <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @protein.name %>">
             </div>
           </div>
+          
+ <!-- Label and input for image_url -->
+          <div class="form-group">
+            <label for="image_url" class="col-sm-2 control-label">
+              Image
+            </label>
+            <div class="col-sm-10">
+              <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control" value="<%= @protein.image_url %>">
+            </div>
+            </div>
 
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

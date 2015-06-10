@@ -14,6 +14,7 @@ class CuisinesController < ApplicationController
   def create
     @cuisine = Cuisine.new
     @cuisine.name = params[:name]
+    @cuisine.image_url = params[:image_url]
 
     if @cuisine.save
       redirect_to "/cuisines", :notice => "Cuisine created successfully."
@@ -30,6 +31,7 @@ class CuisinesController < ApplicationController
     @cuisine = Cuisine.find(params[:id])
 
     @cuisine.name = params[:name]
+    @cuisine.image_url = params[:image_url]
 
     if @cuisine.save
       redirect_to "/cuisines", :notice => "Cuisine updated successfully. Sounds delicious."

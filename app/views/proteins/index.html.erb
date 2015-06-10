@@ -23,7 +23,12 @@
         <h3 class="panel-title"><%= protein.name %></h3>
       </div>
       <div class="panel-body">
-       
+      <dl>
+          <dd><img src="<%= protein.image_url%>" width="200"></dd>
+          </dl>
+
+
+
         <div class="btn-group btn-group-justified">
           <a href="/proteins/<%= protein.id %>" class="btn btn-primary">
             <i class="fa fa-search-plus"></i>
