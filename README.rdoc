@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+OpenRecipe is a no-frills program to store your favorite recipes.  
 
-Things you may want to cover:
+To Run:
 
-* Ruby version
+* Follow typical process: bundld install and rake db:migrate
 
-* System dependencies
+* Create a login
 
-* Configuration
+* Create, modify, and delete recipes, chefs, cuisines and proteins
 
-* Database creation
+* PLEASE reach out if there are any issues
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Dave Austin - daustin2016@kellogg.northwestern.edu
